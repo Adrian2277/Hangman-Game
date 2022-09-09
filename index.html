@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>     
+        <img class="logo" src="./img/Vector.png">
+        <h1 class="titulo">Hangman Game</h1>        
+    </header>
+
+    <main>
+        <section style="display:flex" class="pagina-inicial">
+            <img class="imagen" src="./img/pngegg.png">
+            <button class="boton-iniciar-juego" onclick="btnIniciarJuego()">Iniciar juego</button>
+            <button class="boton-agregar-nueva-palabra" onclick="btnAgregarNuevaPalabra()">Agregar nueva palabra</button>
+        </section>
+        
+        <section style="display:none" class="pagina-juego">
+            <div class="muneco">
+               
+                <img class="rectangle14" src="./img/Rectangle 14.png">
+                <img class="rectangle15" src="./img/Rectangle 15.png">
+                <img class="rectangle16" src="./img/Rectangle 16.png">
+                <img class="rectangle17" src="./img/Rectangle 17.png" style="visibility:hidden">
+                <img class="ellipse9" src="./img/Ellipse 9 (Stroke).png" style="visibility:hidden">
+                <img class="rectangle18" src="./img/Rectangle 18.png" style="visibility:hidden">
+                <img class="rectangle19" src="./img/Rectangle 19.png" style="visibility:hidden">
+                <img class="rectangle20" src="./img/Rectangle 20.png" style="visibility:hidden">
+                <img class="rectangle21" src="./img/Rectangle 21.png" style="visibility:hidden">
+                <img class="rectangle22" src="./img/Rectangle 22.png" style="visibility:hidden">
+                <img class="cartel" style="visibility:hidden" src="./img/you died.png">
+                <img class="cartelWin" style="visibility:hidden" src="./img/you win.png">
+                
+            </div>
+
+            <div class="textbox">
+                <div class="letterbox" style="display:none" id="btn1">
+                    <output type="text" class="box1" name="" id="acierto1"></output>
+                    <img class="renglon" src="./img/Rectangle 6.png">
+                </div>
+                <div class="letterbox" style="display:none" id="btn2">
+                    <output type="text" class="box1" name="" id="acierto2"></output>
+                    <img class="renglon" src="./img/Rectangle 6.png">
+                </div>
+                <div class="letterbox" style="display:none" id="btn3">
+                    <output type="text" class="box1" name="" id="acierto3"></output>
+                    <img class="renglon" src="./img/Rectangle 6.png">
+                </div>
+                <div class="letterbox" style="display:none" id="btn4">
+                    <output type="text" class="box1" name="" id="acierto4"></output>
+                    <img class="renglon" src="./img/Rectangle 6.png">
+                </div>
+                <div class="letterbox" style="display:none" id="btn5">
+                    <output type="text" class="box1" name="" id="acierto5"></output>
+                    <img class="renglon" src="./img/Rectangle 6.png">
+                </div>
+                <div class="letterbox" style="display:none" id="btn6">
+                    <output type="text" class="box1" name="" id="acierto6"></output>
+                    <img class="renglon" src="./img/Rectangle 6.png">
+                </div>
+                <div class="letterbox" style="display:none" id="btn7">
+                    <output type="text" class="box1" name="" id="acierto7"></output>
+                    <img class="renglon" src="./img/Rectangle 6.png">
+                </div>
+                <div class="letterbox" style="display:none" id="btn8">
+                    <output type="text" class="box1" name="" id="acierto8"></output>
+                    <img class="renglon" src="./img/Rectangle 6.png">
+                </div>                
+            </div>
+
+            <div class="textbox">
+                <div class="letterbox">
+                    <output type="text" style="display:none" class="box2" style name="" id="error1"></output>
+                </div>
+                <div class="letterbox">
+                    <output type="text" style="display:none" class="box2" name="" id="error2"></output>
+                </div>
+                <div class="letterbox">
+                    <output type="text" style="display:none" class="box2" name="" id="error3"></output>
+                </div>
+                <div class="letterbox">
+                    <output type="text" style="display:none" class="box2" name="" id="error4"></output>
+                </div>
+                <div class="letterbox">
+                    <output type="text" style="display:none" class="box2" name="" id="error5"></output>
+                </div>
+                <div class="letterbox">
+                    <output type="text" style="display:none" class="box2" name="" id="error6"></output>
+                </div>
+                <div class="letterbox">
+                    <output type="text" style="display:none" class="box2" name="" id="error7"></output>
+                </div>
+                <div class="letterbox">
+                    <output type="text" style="display:none" class="box2" name="" id="error8"></output>
+                </div>
+            </div>
+            
+            
+            
+
+            
+            <div class="boton">
+                <button class="boton-nuevo-juego" onclick="btnNuevoJuego()">Nuevo juego</button>
+                <button class="boton-desistir" onclick="location.reload(true);">Desistir</button>
+            </div>
+                     
+        </section>
+
+        <section style="display:none" class="pagina-palabra-nueva">
+            <div>
+                <input type="text" class="ingresar-palabra" placeholder="Ingrese una palabra" name="" id="">
+            </div>
+            <div class="boton">
+                <button class="boton-guardaryempezar" onclick="btnencriptar()">Guardar y empezar</button>
+                <button class="boton-cancelar" onclick="btndesencriptar()">Cancelar</button>
+            </div>
+            <div class="alerta">
+                <img src="./img/symbol.svg" class="imagen-symbol">
+                <label class="mensaje">Máx. de 8 letras</label>
+            </div>
+           
+        </section> 
+
+   
+             
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+* {
+    background: #E5E5E5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    line-height: 0%;
+    margin: 1rem;
+}
+
+.titulo{
+    color: #09305f;    
+    font-size: 45px;
+    text-align: center;
+    margin-top: 0rem;
+}
+
+/*página inicial*/
+
+.pagina-inicial{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;    
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;    
+}
+
+.imagen{
+    margin-left: 146px; 
+}
+
+.boton-iniciar-juego{
+    background: #0A3871;
+    border: none;  
+    width: 317px;
+    height: 114px;
+    border-radius: 24px;
+    font-size: 20px;
+    margin: 20px;
+    color: #E5E5E5;   
+}
+
+.boton-agregar-nueva-palabra{ 
+    width: 280px;
+    height: 67px;
+    margin: 20px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: bold;   
+    color: #0A3871;
+}
+
+/*página juego*/
+
+.pagina-juego{
+    flex-direction: column;
+    margin-top: 64px;     
+}
+
+.muneco {
+    z-index: 0;
+    max-width: 964px;
+    max-height: 408px;
+    text-align: center;
+    margin: auto;
+}
+
+.rectangle14{
+    height: 5px;
+    z-index: 3;
+    position: relative;
+    left: 252px;
+}
+
+.rectangle15{
+    width: 6px;
+    z-index: 2;
+    position: relative;
+    left: -1px;
+}
+
+.rectangle16{
+    height: 5px;
+    z-index: 3;
+    position: relative;
+    left: -11px;
+    bottom: 355px;
+}
+
+.rectangle17{
+    width: 6px;
+    z-index: 2;
+    position: relative;
+    bottom: 310px;
+    left: -22px;
+}
+
+.ellipse9{
+    width: 79px;
+    z-index: 5;
+    position: relative;
+    bottom: 233px;
+    right: 69px;
+}
+
+.rectangle18{
+    width: 6px;
+    z-index: 12;
+    position: relative;
+    bottom: 99px;
+    right: 113px;
+}
+
+.rectangle19{
+    width: 43px;
+    z-index: 7;
+    position: relative;
+    right: 162px;
+    bottom: 32px;
+}
+
+.rectangle20{
+    width: 43px;
+    z-index: 8;
+    position: relative;
+    bottom: 31px;
+    right: 168px;
+}
+
+.rectangle21{
+    width: 43px;
+    z-index: 3;
+    position: relative;
+    bottom: 167px;
+    right: 218px;
+}
+
+.rectangle22{
+    width: 43px;
+    z-index: 3;
+    position: relative;
+    bottom: 164px;
+    right: 305px;
+}
+
+.textbox{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-bottom: 5px;
+}
+
+.renglon{
+    width: 80px; 
+    margin-top: 10px; 
+}
+
+.box1{
+    font-size: 90px;
+    text-align: center;
+    color:#09305f;
+    width: 80px; 
+    height: 80px;
+    margin: 10px;   
+}
+
+.letterbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.box2{
+    font-size: 50px;
+    text-align: center;
+    color:#515252;
+    width: 45px; 
+    height: 45px;
+    margin: 5px;   
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.boton-nuevo-juego{
+    background: #0A3871;
+    border: none;  
+    width: 332px;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 18px;
+    margin: 20px;
+    color: #E5E5E5;   
+}
+
+.boton-desistir{ 
+    width: 332px;
+    height: 67px;
+    margin: 20px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: bold;   
+    color: #0A3871;
+}
+
+/*página ingresar palabra nueva*/
+
+.pagina-palabra-nueva{
+    flex-direction: column;
+    align-items: center;
+}
+
+.ingresar-palabra{
+    width: 686px;
+    height: 69px;
+    margin-top: 86px;
+    margin-bottom: 263px;
+    border: none; 
+    font-size: 30px;
+    text-align: initial;
+    
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.boton-guardaryempezar{
+    background: #0A3871;
+    border: none;  
+    width: 332px;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 18px;
+    margin: 20px;
+    color: #E5E5E5;   
+}
+
+.boton-cancelar{ 
+    width: 332px;
+    height: 67px;
+    margin: 20px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: bold;   
+    color: #0A3871;
+}
+
+.alerta{
+    display: flex;
+    align-items: center;
+}
+
+.mensaje{
+    margin: 10px;
+}
+
+.cartel{
+    z-index: 11;
+    position: relative;
+    bottom: 278px;
+    left: 370px;
+}
+
+.cartelWin {
+    z-index: 1;
+    width: 271px;
+    position: relative;
+    bottom: 305px;
+    left: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
